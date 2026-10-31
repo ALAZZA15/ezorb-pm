@@ -91,11 +91,3 @@ If you ran `python seed.py`, you can log in with:
 - **Email:** `demo@ezorb.dev`
 - **Password:** `OrbDemo2026!`
 ```
-
-4. **Simpan file** dengan menekan **`Ctrl + S`**. *(Ini sangat penting! Jangan sampai lupa)*.
-5. Buka terminal VS Code (posisinya di `D:\EzOrb-PM`), lalu jalankan perintah upload ini **satu per satu**:
-   ```powershell
-   git add .
-   git commit -m "Fix: README formatting"
-   git push
-   ```
