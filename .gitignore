@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Environment Variables (PENTING!)
+.env
+
+# Build output
+dist/
+build/
+
+# Editor
+.vscode/
+.idea/
