@@ -90,4 +90,3 @@ Go to: 👉 **http://localhost:5173/**
 If you ran `python seed.py`, you can log in with:
 - **Email:** `demo@ezorb.dev`
 - **Password:** `OrbDemo2026!`
-```
