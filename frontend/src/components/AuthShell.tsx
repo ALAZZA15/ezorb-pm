@@ -4,13 +4,11 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 export function GithubButton() {
   return (
     <a
-      href="https://github.com/alazza15/ezorb-linux"
-      target="_blank"
-      rel="noreferrer"
+      href="/api/auth/github/start"
       data-testid="github-login-button"
       className="inline-flex h-11 w-full items-center justify-center gap-2.5 rounded-xl bg-[#1F2937] text-sm font-semibold text-white shadow-sm transition-[background-color,transform] duration-200 hover:bg-[#111827] active:scale-[0.99] dark:bg-white dark:text-[#0F1424] dark:hover:bg-[#E2E8F0]"
     >
-      <SiGithub size={18} /> View on GitHub
+      <SiGithub size={18} /> Continue with GitHub
     </a>
   );
 }
