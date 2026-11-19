@@ -44,7 +44,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <Logo imgClassName="h-10" />
           <span className="hidden border-l border-[#C9D6EE] pl-3 text-sm font-semibold tracking-tight text-[#1E4A9E] sm:inline dark:border-white/15 dark:text-[#E2E8F0]" data-testid="navbar-product-name">
-            Package Manager
+            Ezorb Package Manager
           </span>
         </div>
 
@@ -108,7 +108,7 @@ export function Navbar() {
             <SheetContent side="right" className="w-[290px] border-l-white/10 bg-[#EEF1F8] dark:bg-[#0F1424]" data-testid="mobile-menu">
               <SheetHeader>
                 <SheetTitle className="flex items-center gap-2 text-[#1E4A9E] dark:text-white">
-                  <img src="/brand/ezorb-mark.png" alt="" className="h-7 w-auto" /> Package Manager
+                  <img src="/brand/ezorb-mark.png" alt="" className="h-7 w-auto" /> Ezorb Package Manager
                 </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-4" aria-label="Mobile">
