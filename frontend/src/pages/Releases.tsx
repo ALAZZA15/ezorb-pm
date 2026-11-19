@@ -2,10 +2,22 @@ import { Calendar, ExternalLink, GitBranch, PackageOpen, Tag } from "lucide-reac
 import { Reveal } from "@/components/Reveal";
 
 const EZORB_REPO = "https://github.com/ALAZZA15/EzOrb-Linux";
+const EZORB_RELEASE = `${EZORB_REPO}/releases/tag/v0.1.0`;
+const EZORB_ISO = `${EZORB_REPO}/releases/download/v0.1.0/ezorb.iso`;
+const EZORB_RELEASES = `${EZORB_REPO}/releases`;
 const KERNEL_REPO = "https://github.com/ALAZZA15/New_Kernel_LFS";
-const KERNEL_RELEASES = `${KERNEL_REPO}/releases`;
 
 const releases = [
+  {
+    version: "v0.1.0",
+    name: "EzOrb Linux Genesis",
+    status: "Initial release",
+    date: "November 19, 2026",
+    description: "The first EzOrb Linux ISO release. Built with Buildroot and intended for testing in QEMU or VirtualBox.",
+    highlights: ["EzOrb Linux", "Linux 6.x", "Buildroot", "ISO · 517.6 MB"],
+    releaseUrl: EZORB_RELEASE,
+    downloadUrl: EZORB_ISO,
+  },
   {
     version: "New Kernel",
     name: "MyOS x86_64",
@@ -13,14 +25,7 @@ const releases = [
     date: "Kernel source",
     description: "A hand-written minimal x86_64 kernel with Multiboot 1 boot, protected-to-long mode transition, GDT, IDT, VGA text mode, serial output, and CPU exception handling.",
     highlights: ["x86_64", "C + assembly", "GRUB", "32 exception stubs"],
-  },
-  {
-    version: "v0.1",
-    name: "Genesis",
-    status: "Experimental",
-    date: "v0.1 Genesis",
-    description: "The first EzOrb Linux build: custom Linux 6.x kernel, XFCE 4.18, networking, audio, SSH, and Buildroot tooling.",
-    highlights: ["Linux 6.x", "XFCE 4.18", "QEMU / VirtualBox", "Buildroot 2024.02"],
+    releaseUrl: KERNEL_REPO,
   },
 ];
 
@@ -34,7 +39,7 @@ export default function Releases() {
             <h1 className="text-3xl font-bold tracking-tight text-heading sm:text-4xl" data-testid="releases-title">Releases EzOrb</h1>
             <p className="mt-2 text-[#5B6478] dark:text-[#9AA3BA]">Build releases, kernel updates, and platform milestones.</p>
           </div>
-          <a href={KERNEL_RELEASES} target="_blank" rel="noreferrer"
+          <a href={EZORB_RELEASES} target="_blank" rel="noreferrer"
             className="btn-signature inline-flex h-10 items-center gap-2 rounded-xl px-4 text-sm font-semibold" data-testid="releases-github-button">
             GitHub Releases <ExternalLink className="size-4" />
           </a>
@@ -57,11 +62,17 @@ export default function Releases() {
                     <span className="inline-flex items-center gap-1"><GitBranch className="size-3.5" /> {release.status}</span>
                   </div>
                 </div>
-                <a href={release.version === "New Kernel" ? KERNEL_REPO : EZORB_REPO} target="_blank" rel="noreferrer"
+                <a href={release.releaseUrl} target="_blank" rel="noreferrer"
                   className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[#CBD4E6] px-3 text-xs font-semibold text-[#1E4A9E] hover:border-[#3B4FC4] dark:border-white/10 dark:text-[#CBD5E1]" data-testid={`release-${release.version}-link`}>
                   View release <ExternalLink className="size-3.5" />
                 </a>
               </div>
+              {release.downloadUrl && (
+                <a href={release.downloadUrl}
+                  className="btn-signature mt-5 inline-flex h-10 items-center gap-2 rounded-xl px-4 text-sm font-semibold" data-testid={`release-${release.version}-download`}>
+                  <PackageOpen className="size-4" /> Download EzOrb ISO
+                </a>
+              )}
               <p className="mt-5 text-sm leading-relaxed text-[#374151] dark:text-[#CBD5E1]">{release.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {release.highlights.map((highlight) => (
