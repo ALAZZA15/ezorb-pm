@@ -103,8 +103,8 @@ def _gh_creds() -> tuple[str, str]:
 
 def _public_base(request: Request) -> str:
     host = (
-        request.headers.get("x-forwarded-host")
-        or os.environ.get("APP_URL", "").split("://")[-1]
+        os.environ.get("APP_URL", "").split("://")[-1]
+        or request.headers.get("x-forwarded-host")
         or request.headers.get("host", "")
     )
     proto = request.headers.get("x-forwarded-proto", "https").split(",")[0].strip()

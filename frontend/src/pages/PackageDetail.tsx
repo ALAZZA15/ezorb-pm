@@ -68,7 +68,7 @@ export default function PackageDetail() {
 
           <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_300px]">
             <Tabs defaultValue="readme" className="min-w-0">
-              <TabsList variant="line" className="w-full justify-start gap-2 border-b border-[#D7DEEC] dark:border-white/10" data-testid="detail-tabs">
+              <TabsList className="w-full justify-start gap-2 border-b border-[#D7DEEC] dark:border-white/10" data-testid="detail-tabs">
                 <TabsTrigger value="readme" data-testid="tab-readme"><FileText className="size-4" /> README</TabsTrigger>
                 <TabsTrigger value="versions" data-testid="tab-versions"><GitBranch className="size-4" /> Versions <span className="text-xs text-muted-foreground">{pkg.versions.length}</span></TabsTrigger>
                 <TabsTrigger value="dependencies" data-testid="tab-dependencies"><Layers className="size-4" /> Dependencies <span className="text-xs text-muted-foreground">{pkg.dependencies.length}</span></TabsTrigger>

@@ -6,7 +6,7 @@ import {
   DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Logo } from "@/components/Logo";
+import { Logo } from "@/components/logo";
 import { UserAvatar } from "@/components/UserAvatar";
 import { useMe } from "@/hooks/useMe";
 import { useTheme } from "@/hooks/useTheme";
@@ -16,6 +16,8 @@ import { cn } from "@/lib/utils";
 const NAV = [
   { to: "/", label: "Home", id: "home", end: true },
   { to: "/packages", label: "Packages", id: "packages", end: false },
+  { to: "/download", label: "Download", id: "download", end: false },
+  { to: "/releases", label: "Releases", id: "releases", end: false },
   { to: "/docs", label: "Docs", id: "docs", end: false },
   { to: "/categories", label: "Categories", id: "categories", end: false },
   { to: "/community", label: "Community", id: "community", end: false },

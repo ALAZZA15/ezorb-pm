@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { SiDiscord, SiGithub } from "@icons-pack/react-simple-icons";
-import { Logo } from "@/components/Logo";
+import { Logo } from "@/components/logo";
 
 const linkCls = "text-sm text-[#5B6478] transition-colors duration-200 hover:text-[#3B4FC4] dark:text-[#9AA3BA] dark:hover:text-[#4DB8D8]";
 
@@ -28,6 +28,8 @@ export function Footer() {
           <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-[#1E4A9E] dark:text-[#E2E8F0]">Registry</h4>
           <ul className="space-y-2.5">
             <li><Link to="/packages" className={linkCls} data-testid="footer-packages-link">Browse packages</Link></li>
+            <li><Link to="/download" className={linkCls} data-testid="footer-download-link">Download EzOrb</Link></li>
+            <li><Link to="/releases" className={linkCls} data-testid="footer-releases-link">Releases</Link></li>
             <li><Link to="/categories" className={linkCls} data-testid="footer-categories-link">Categories</Link></li>
             <li><Link to="/my-packages" className={linkCls} data-testid="footer-publish-link">Publish a package</Link></li>
           </ul>

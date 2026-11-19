@@ -6,6 +6,8 @@ import PackageDetail from "@/pages/PackageDetail";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import ForgotPassword from "@/pages/ForgotPassword";
+import Download from "@/pages/Download";
+import Releases from "@/pages/Releases";
 
 function ComingSoon({ title }: { title: string }) {
   return (
@@ -26,6 +28,8 @@ export default function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="forgot-password" element={<ForgotPassword />} />
+        <Route path="download" element={<Download />} />
+        <Route path="releases" element={<Releases />} />
         
         <Route path="docs" element={<ComingSoon title="Documentation" />} />
         <Route path="categories" element={<ComingSoon title="Categories" />} />

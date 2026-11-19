@@ -75,7 +75,7 @@ export default function Packages() {
           </div>
           <Select value={sort} onValueChange={(v: string) => update({ sort: v, page: 1 })}>
             <SelectTrigger className="h-11 w-full rounded-xl bg-white/80 md:w-48 dark:bg-[#0F1424]/70" data-testid="packages-sort-select">
-              <SelectValue>{(v) => `Sort: ${SORT_LABELS[(v as SortKey) ?? "popular"]}`}</SelectValue>
+              <SelectValue>{`Sort: ${SORT_LABELS[sort]}`}</SelectValue>
             </SelectTrigger>
             <SelectContent>
               {(Object.keys(SORT_LABELS) as SortKey[]).map((k) => (
